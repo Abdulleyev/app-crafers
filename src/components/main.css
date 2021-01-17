@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body {
+  background-image: url("../images/Задний фон главная.jpg");
+  background-size: cover; }
+
+.header {
+  background-color: #5C307F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); }
+
+.logo {
+  width: 75px; }
+
+.dropdown {
+  list-style: none; }
+
+.nav-item span {
+  font-size: 13px;
+  font-weight: 700; }
+
+.plane {
+  width: 170px;
+  height: 50px;
+  background-color: #F54337;
+  border-radius: 40px;
+  overflow: hidden; }
+  .plane img {
+    transform: rotate(34deg); }
+  .plane:hover img {
+    animation-name: anim3;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: rotate(34deg);
+    padding-top: 30px; }
+@keyframes anim3 {
+  100% {
+    transform: translate(100px, -100px) rotate(34deg); } }
+.nav-item .nav-link {
+  color: #fd7e14; }
+
+.globus:hover {
+  transform: scale(1.2);
+  transition: all 2s linear; }
+
+/*# sourceMappingURL=main.css.map */
