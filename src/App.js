@@ -7,13 +7,12 @@ import Jobs from "./pages/Jobs";
 import Contacts from "./pages/Contacts";
 import Navbar from './components/Navbar';
 import React from "react";
-import Carousel from "./components/Carousel";
 function App() {
   return (
     <div>
       <BrowserRouter>
           <Navbar/>
-          {/*<Carousel/>*/}
+
         <Switch>
         <Route exact path='/' component={Home}/>
         <Route exact path='/about' component={About}/>

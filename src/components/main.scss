@@ -1,56 +1,482 @@
-body{
-  background-image: url("../images/Задний фон главная.jpg");
- background-size: cover;
+.font-family-bold {
+  font-family: "OpenSans-Bold", sans-serif;
 }
+
+.font-family-light {
+  font-family: "OpenSans-Light", sans-serif;
+}
+
+.font-family-regular {
+  font-family: "NexaScriptBold", sans-serif;
+}
+
+.font-family-semibold {
+  font-family: "OpenSans-SemiBold", sans-serif;
+}
+
 ////////////////////////////////* Navbar style *//////////////////////////
-.header{
-  background-color: #5C307F;
-  box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.2);
+body {
+  overflow-x: hidden;
 }
-.logo{
+
+.header {
+  background-color: #5C307F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  //background-color: transparent;
+
+}
+
+
+.logo {
   width: 75px;
 }
-.dropdown{
+
+.dropdown {
   list-style: none;
 }
-.nav-item{
-  span{
+
+.nav-item {
+  span {
     font-size: 13px;
     font-weight: 700;
+    transition:1.5s;
+  }
+  &:hover, &.active {
+    span {
+      color: #fd7e14;
+      transition:1.5s;
+    }
   }
 }
-.plane{
+
+.plane {
   width: 170px;
   height: 50px;
   background-color: #F54337;
   border-radius: 40px;
   overflow: hidden;
-     img{
-       transform: rotate(34deg);
-        }
-      &:hover{
-        img{
-          animation-name: anim3;
-          animation-duration: 1.4s;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-          transform: rotate(34deg);
-          padding-top: 30px;
-          @keyframes anim3 {
-            100%{
-              transform: translate(100px,-100px) rotate(34deg);
-            }
-          }
 
+  img {
+    transform: rotate(34deg);
+  }
+
+  &:hover {
+    img {
+      animation-name: anim3;
+      animation-duration: 1.4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transform: rotate(34deg);
+      padding-top: 30px;
+      @keyframes anim3 {
+        100% {
+          transform: translate(100px, -100px) rotate(34deg);
         }
       }
+
+    }
+  }
 }
-.nav-item{
-  .nav-link{
+
+.nav-item {
+  .nav-link {
     color: #fd7e14;
   }
 }
-.globus:hover{
-  transform: scale(1.2);
-  transition: all 2s linear;
+
+.globus {
+  transition: all 0.4s linear;
+
+  &:hover {
+    transform: scale(1.25);
+    transition: all 0.4s linear;
+  }
 }
+
+/////////////////**********   Carousel Style **** //////////////////////////////
+
+
+.background-img {
+  background-image: url("../images/Задний фон главная.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.slick-prev::before, .slick-next::before{
+  font-size: 50px !important;
+
+}
+.slick-prev {
+  left: -35px !important;
+}
+.slick-next {
+  right: 0px !important;
+
+}
+
+.font-carousel {
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-uppercase {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+}
+
+.slick-dots li button::before {
+  color: darkgrey !important;
+  margin-top: 0;
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button::before {
+  color: white !important;
+  transform: scale(1.5);
+
+}
+
+.carousel-images {
+
+  img {
+    width: 100%;
+    height: 100vh;
+
+  }
+
+}
+
+
+////////////////////************ Main-second **********************/////////////
+.youtube-video {
+  z-index: 0;
+  top: 180px;
+  left: -40px;
+  position: absolute;
+}
+
+.main-second {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/2.jpg");
+  padding-top: 300px;
+  padding-bottom: 200px;
+
+  span {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  img {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+  }
+
+  button {
+    background-color: #5C307F;
+    border-radius: 100px !important;
+  }
+}
+
+
+//////////////////************ main-third *************************8//////////
+.main-third {
+  width: 100%;
+  height: 100%;
+  background-color: #5C307F;
+  .col-sm-4{
+    &:hover{
+      .vertikal-line{
+        background-color: #fd7e14;
+        transition: 1.4s;
+    }
+      .card-title{
+        color: #fd7e14;
+        transition: 1.4s;
+      }
+      .images{
+        opacity: 0.3;
+        transition: 1.4s;
+      }
+    }
+  }
+}
+
+
+.main-third-in {
+  img {
+    width: 250px;
+    height: 220px;
+    border-radius: 15px;
+
+  }
+}
+
+.vertikal-line {
+  height: 100px;
+  width: 1px;
+  margin-top: auto;
+  background-color: white;
+  transition: 1.4s;
+}
+
+.card-title {
+  left: 18px;
+  top: 20px;
+  font-size: 40px;
+  color: white;
+  line-height: 40px;
+  transition: 1.4s;
+}
+.iframe{
+  padding: 66px;
+  h3{
+    color: #5C307F;
+  }
+}
+////////////////////////////////////// *************** Sidebar ******************************////
+.sidebar{
+  width: 300px;
+  height: 500px;
+  padding: 20px;
+  color: white;
+  overflow: auto;
+
+  background-color: #5C307F;
+
+}
+//////////////////////////**************** carousel 2  *********************////////////////
+.img{
+  background-color: #FFB914;
+}
+.carousel-card{
+  img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  h4{
+    color: #5C307F;
+  }
+  p{
+    color: #afafaf;
+  }
+  div{
+    button{
+      border-radius: 20px;
+      background-color: #fd7e14;
+    }
+  }
+}
+.slick-prev::before, .slick-next::before{
+color: white !important;
+}
+
+
+
+// ///////////////////////////// ************** img360 Style *************** ////////////////////
+
+.img360 {
+  background-color: #5C307F;
+  .col-sm-9{
+    img{
+      width: 100%;
+      height: 440px;
+      padding-left: 80px;
+
+    }
+  }
+  button {
+    background-color: #5C307F;
+    padding: 10px 15px;
+    margin-top: 16px;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+}
+
+
+//////////////////////////************************ Footer Style  ***********////////////////////
+
+
+.footer {
+  background-color: #381C4D;
+  width: 100%;
+  height: 100%;
+
+  .container-fluid{
+    .row {
+      & .col-sm-3:nth-child(1) {
+        img {
+          width: 120px;
+          height: 100px;
+        }
+      }
+
+      & .col-sm-3:nth-child(3) {
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: 600;
+          font-size: 14px;
+
+          &:hover {
+            color: #fd7e14;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 570px ){
+  ////////////////////////////////********************* Media style Navbar ********************* //////////////////////////
+  .header{
+    div{
+      padding: 0 !important;
+    }
+    .nav-item{
+      a{
+        margin: 0 !important;
+        img{
+          margin: 0 !important;
+        }
+      }
+    }
+    .navbar-nav{
+      div{
+        a{
+          margin-right: 13px !important;
+        }
+      }
+    }
+    .plane{
+      margin-top: 10px !important;
+    }
+  }
+  /////////////////////////********************** media carousel  **************** //////////////////////////////
+.carousel-main{
+    text-align: center!important;
+  .carousel-images{
+    img{
+      height: 50vh !important;
+    }
+      padding-top: 30px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    .font-carousel{
+      font-size: 32px !important;
+    }
+    .carousel-uppercase{
+      font-size: 14px !important;
+    }
+
+  }
+}
+  .slick-prev::before, .slick-next::before{
+    display: none;
+
+  }
+  /////////////////////////************ main second *********************/////////////////////
+  .main-second{
+    padding-top: 40px !important;
+    text-align: center;
+    padding-bottom: 250px !important;
+    img{
+      display: none !important;
+    }
+    .about{
+      margin-bottom: 100px !important;
+      padding: 17px !important;
+      h2{
+        margin-bottom: 25px !important;
+      }
+
+    }
+    .youtube-video{
+      top: 420px;
+
+      iframe{
+        width: 300px!important;
+        height: 300px !important;
+
+      }
+    }
+  }
+  .main-third{
+    .container-fluid{
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+    }
+
+  }
+  .iframe{
+    padding: 0;
+    margin-left: 34px;
+    width: 100%;
+    iframe{
+      width: 83%;
+    }
+    div{
+      display: block !important;
+    }
+
+  }
+
+
+.img360{
+  padding: 10px;
+  .col-sm-9{
+    img{
+      padding:0;
+    }
+  }
+}
+  .footer{
+    text-align: center;
+  }
+  .row{
+    div{
+      justify-content: center;
+    }
+  }
+  .sidebar{
+    width: 83%;
+    margin-right: 20px !important;
+  }
+ .carousel-card{
+   display: block;
+
+   p , button{
+     display: none;
+
+   }
+   div{
+     display: none;
+     img{
+       display: none;
+     }
+   }
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
